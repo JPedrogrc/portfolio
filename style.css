@@ -1,0 +1,448 @@
+/* ========================= */
+/* Variáveis de Tema */
+/* ========================= */
+
+:root {
+    --cor-viva: #3b82f6;
+    --cor-viva-hover: #2563eb;
+    --fundo-botao-hover: rgba(59, 130, 246, 0.5);
+    --cor-escura: #374151;
+    --cor-fundo: #f9f9f9;
+    --cor-texto: #1e1e1e;
+    --cor-branca: #ffffff;
+}
+
+/* ========================= */
+/* Estilo geral */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--fundo);
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto; 
+}
+
+.flex {
+    display: flex;
+}
+
+h2.titulo {
+    color: var(--texto-principal);
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: var(--cor-viva);
+}
+
+/* ========================= */
+/* Estilo do cabeçalho */
+/* ========================= */
+
+header {
+    padding: 30px 3%;
+}
+
+header .interface {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: var(--cor-viva);
+    transform: scale(1.1);
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 35px;
+}
+
+header .jpcontato button {
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--cor-viva);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+header .jpcontato button:hover {
+    box-shadow: 0 0 8px var(--fundo-botao-hover);
+    transform: scale(1.05);
+    transition: 1.2s;
+}
+
+/* ========================= */
+/* Estilo do topo do site */
+/* ========================= */
+
+section.topo-site {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 3%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+section.topo-site .flex {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--texto-principal);
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-site h1 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.topo-site .txttoposite h1 span {
+    color: var(--cor-viva);
+}
+
+.topo-site .txttoposite p {
+    text-align: center;
+    color: var(--texto-secundario);
+    margin: 40px 0;
+}
+
+.topo-site .txttoposite p:nth-of-type(2) span {
+    color: var(--cor-viva);
+    font-size: 20px;
+}
+
+.topo-site .txttoposite button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--cor-viva);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.topo-site .txttoposite button:hover {
+    box-shadow: 0 0 8px var(--fundo-botao-hover);
+    transition: 1.2s;
+    transform: scale(1.05);
+}
+
+.topo-site .txttoposite button a {
+    text-align: center;
+}   
+
+.topo-site .txttoposite a {
+    text-decoration: none;
+}
+
+.topo-site .txttoposite .setaparabaixo {
+    padding: 60px 3%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* ========================= */
+/* Estilo das especialidades */
+/* ========================= */
+
+section.especialidades {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 3%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.especialidades p {
+    color: var(--texto-principal);
+    text-align: center;
+}
+
+.especialidades .especialidades-box {
+    display: flex;
+    flex-direction: column;
+    color: var(--texto-principal);
+    padding: 40px;
+    align-items: center;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: var(--fundo-box);
+    transition: 1.2s;
+}
+
+.especialidades .especialidades-box:hover {
+    box-shadow: 0 0 8px #ccc;
+    transform: scale(1.05);
+}
+
+.especialidades .especialidades-box i {
+    color: var(--cor-viva);
+    font-size: 72px; 
+}
+
+.especialidades .especialidades-box h3 {
+    color: var(--texto-principal);
+    font-size: 24px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.especialidades .especialidades-box .langs,
+.especialidades .especialidades-box .libraries,
+.especialidades .especialidades-box .tools {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Estilo Sobre*/
+
+section.sobre {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 3%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+section.sobre .flex {
+    gap: 60px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobre .textosobre {
+    color: var(--texto-principal);
+}
+.sobre .textosobre h2 {
+    margin-bottom: 30px;
+}
+.sobre .textosobre p {
+    text-align: justify;
+}
+.sobre .textosobre .social{
+    display: flex;
+    margin-top: 15px;
+}
+.sobre .textosobre .social button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-viva);
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 1.2s;
+}
+.sobre .textosobre .social button:hover {
+  transform: scale(1.1);
+}
+
+
+/*Estilo Projetos*/
+
+section.projetos{
+    padding: 80px 4%;
+}
+section.projetos .projetosflex{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.img-proj{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+    transition: 1.5s;
+}
+.img-proj:hover{
+    background-position: 100% 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cor-branca);
+    opacity: 0;
+    transition: .5s;
+    text-align: center;
+}
+.overlay:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+/* Modais */
+
+.modal-fundo {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-fundo.mostrar {
+  opacity: 1;
+}
+
+.modal-conteudo {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Espaçamento entre os elementos */
+  text-align: center; /* Centraliza o texto */
+}   
+
+.modal-conteudo p{
+    text-align: justify;
+}
+.modal-conteudo ul{
+    text-align: justify;
+}
+
+.modal-fundo.mostrar .modal-conteudo {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.btn-fechar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.btn-fechar:hover {
+  color: #333;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 12px 24px; /* aumentei um pouco */
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;;
+}
+
+.btn-link:hover {
+  background-color: #2563eb;
+}
+
+
+
+/* Elementos visuais de apoio (gerais ou compartilhados) */
+
+.sobreflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.textosobre {
+    max-width: 600px;
+}
+
+.avatarsobre {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
