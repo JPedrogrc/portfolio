@@ -29,12 +29,9 @@
                 </ul>
             </nav>
 
-            <div class="jpcontato">
+            <div class="btn-contato"><!-- jpcontato -->
                 <button>Contato</button>
             </div><!-- jpcontato -->
-            <div class="temastemporario">
-                <!--<button onclick="trocarTema()">Trocar tema</button> -->
-            </div>
         </div><!-- interface -->
     </header>
     <main>
@@ -67,12 +64,20 @@
                 </div><!-- Fim especialidadestitulo -->
                 <div class="flex">
                     <div class="especialidades-box">
-                        <i class="bi bi-code-square"></i>
-                        <h3>Desenvolvimento</h3>
+                        <i class="bi bi-display"></i>
+                        <h3>Front-end</h3>
                         <div class="langs">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="40px" alt="Python">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="40px" alt="HTML5">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="40px" alt="CSS3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="40px" alt="JS">
+                        </div>
+                    </div>
+                    <div class="especialidades-box">
+                        <i class="bi bi-hdd-stack"></i>
+                        <h3>Back-end</h3>
+                        <div class="libraries">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="40px" alt="Python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="40px" alt="Java">
                             <a href="https://www.flaticon.com/br/icones-gratis/sql" target="_blank">
                                 <img src="imagens/sql.png" width="40px" alt="SQL">
                             </a>
@@ -82,20 +87,9 @@
                         <i class="bi bi-tools"></i>
                         <h3>Ferramentas</h3>
                         <div class="tools">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" width="40px" alt="Canva">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" width="40px" alt="Figma">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" width="40px" alt="VScode">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" width="40px" alt="Godot">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" width="40px" alt="Streamlit">
-                        </div>
-                    </div>
-                    <div class="especialidades-box">
-                        <i class="bi bi-book-fill"></i>
-                        <h3>Bibliotecas</h3>
-                        <div class="libraries">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" width="40px">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" width="40px">                     
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" width="40px">
-          
                         </div>
                     </div>
                     
@@ -138,11 +132,49 @@
                 </div><!--Fim projetosflex-->
             </div><!--Fim Interface-->
         </section><!-- Fim Projetos -->
+        <section class="contato">
+            <div class="interface">
+                <h2 class="titulo">Entre em <span>Contato</span></h2>
+                <p>Estou em busca de oportunidades de estágio. Por favor, entre em contato comigo através dos meios abaixo.</p>
+
+                <div class="flex">
+                    <div class="info-item">
+                        <i class="bi bi-envelope-at"></i>
+                        <div class="info-text">
+                        <h4 class="label">E-mail</h4>
+                        <a href="mailto:jopedrogd1@gmail.com" target="_blank" class="link">jopedrogd1@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="bi bi-telephone"></i>
+                        <div class="info-text">
+                        <h4 class="label">Telefone</h4>
+                        <a href="tel:+5592992963524" target="_blank" class="link">(92) 9 9296-3524</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <div class="info-text">
+                        <h4 class="label">CEP</h4>
+                        <a href="https://www.bing.com/search?pglt=419&q=69047121&cvid=f4d968d6cb0b4cdf806528f88aa8eff6&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDQzNzRqMGoxqAIIsAIB&FORM=ANNTA1&PC=U531" target="_blank" class="link">(92) 9 9296-3524</a>
+                        </div>
+                    </div>
+                </div><!-- flex -->
+            </div><!-- interface -->
+        </section><!-- contato -->
+
     </main>
+    <footer>
+        <div class="interface">
+
+        </div><!-- Fim interface -->
+    </footer>
     <div id="modal1" class="modal-fundo">
             <div class="modal-conteudo">
                 <button class="btn-fechar">&times;</button>
-                <h2>Calculadora de Status: Ordem Paranormal RPG</h2>
+                <h3>Calculadora de Status: Ordem Paranormal RPG</h3>
                 <p>Este projeto é uma calculadora interativa desenvolvida para o sistema de RPG Ordem Paranormal,
                     com o objetivo de agilizar a criação e o balanceamento de personagens. A aplicação permite que
                     o usuário insira os cinco atributos principais (Força, Vigor, Inteligência, Presença e Agilidade) e, 
@@ -178,7 +210,7 @@
         <div id="modal2" class="modal-fundo">
             <div class="modal-conteudo">
                 <button class="btn-fechar">&times;</button>
-                <h2>Controle de Iluminação via Interface Web</h2>
+                <h3>Controle de Iluminação via Interface Web</h3>
                 <p>Este projeto está sendo desenvolvido por alunos do primeiro período do curso de Análise e Desenvolvimento de Sistemas, 
                     com o objetivo de aplicar na prática os conhecimentos iniciais de hardware e desenvolvimento web. 
                     A proposta é permitir o controle da iluminação de uma sala real por meio de uma interface web responsiva, 
@@ -188,13 +220,13 @@
                     simples e acione ou desligue as luzes com apenas um clique. O projeto tem foco em 
                     acessibilidade, baixo custo e na integração entre software e hardware.
                 </p>
-                <h3>Funcionalidades principais:</h3>
+                <h4>Funcionalidades principais:</h4>
                 <ul>
                     <li>Interface web simples para acionamento de lâmpadas.</li>
                     <li>Comunicação entre página web e Arduino via rede local.</li>
                     <li>Controle em tempo real dos estados (ligado/desligado).</li>
                 </ul>
-                <h3>Tecnologias utilizadas:</h3>
+                <h4>Tecnologias utilizadas:</h4>
                 <ul>
                     <li>HTML, CSS e JavaScript para a interface web.</li>
                     <li>Arduino para controle de hardware.</li>
@@ -208,16 +240,16 @@
         <div id="modal3" class="modal-fundo">
             <div class="modal-conteudo">
                 <button class="btn-fechar">&times;</button>
-                <h2>Robô Jacaré: Projeto de Automação e Sensores</h2>
+                <h3>Robô Jacaré: Projeto de Automação e Sensores</h3>
                 <p>Este projeto consiste na criação de um robô móvel com a aparência de um jacaré, desenvolvido com o objetivo de aplicar conceitos básicos de robótica, sensores e automação. O robô possui um sensor de proximidade instalado em sua “boca”, que permite detectar objetos ou pessoas em seu campo de alcance.</p>
                 <p>Quando o sensor identifica um objeto dentro de um determinado raio, o robô ativa seu sistema de locomoção para perseguir o alvo, simulando o comportamento de um jacaré que persegue presas.</p>
-                <h3>Funcionalidades principais:</h3>
+                <h4>Funcionalidades principais:</h4>
                 <ul>
                     <li>Detecção de objetos por sensor de proximidade.</li>
                     <li>Movimentação automática do robô para seguir o objeto detectado.</li>
                     <li>Sistema embarcado simples para integração dos sensores e motores.</li>
                 </ul>
-                <h3>Tecnologias e componentes utilizados:</h3>
+                <h4>Tecnologias e componentes utilizados:</h4>
                 <ul>
                     <li>Microcontrolador.</li>
                     <li>Sensor de proximidade.</li>
@@ -305,4 +337,4 @@
         }); 
     </script>
 </body>
-</html>
+</html
