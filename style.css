@@ -47,9 +47,7 @@ h2.titulo span {
     color: var(--cor-viva);
 }
 
-/* ========================= */
 /* Estilo do cabeçalho */
-/* ========================= */
 
 header {
     padding: 30px 3%;
@@ -79,10 +77,10 @@ header nav ul {
 
 header nav ul li {
     display: inline-block;
-    padding: 0 35px;
+    padding: 0 20px;
 }
 
-header .jpcontato button {
+header .btn-contato button {
     padding: 10px 30px;
     font-size: 18px;
     font-weight: 600;
@@ -93,7 +91,7 @@ header .jpcontato button {
     color: #fff;
 }
 
-header .jpcontato button:hover {
+header .btn-contato button:hover {
     box-shadow: 0 0 8px var(--fundo-botao-hover);
     transform: scale(1.05);
     transition: 1.2s;
@@ -174,6 +172,8 @@ section.topo-site .flex {
     display: flex;
     justify-content: center;
     position: relative;
+    margin-top: 20px;
+    margin-bottom: 0px;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
@@ -185,7 +185,7 @@ section.especialidades {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 3%;
-    margin-top: 80px;
+    margin-top: 10px;
     margin-bottom: 80px;
 }
 
@@ -270,9 +270,9 @@ section.sobre .flex {
 .sobre .textosobre .social button{
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     border: none;
-    background-color: var(--cor-viva);
+    background-color: #fff;
+    color: var(--cor-viva);
     font-size: 25px;
     cursor: pointer;
     margin: 0 5px;
@@ -303,6 +303,7 @@ section.projetos .projetosflex{
     cursor: pointer;
     position: relative;
     transition: 1.5s;
+    margin-top: 60px;
 }
 .img-proj:hover{
     background-position: 100% 100%;
@@ -399,7 +400,7 @@ section.projetos .projetosflex{
 
 .btn-link {
   display: inline-block;
-  padding: 12px 24px; /* aumentei um pouco */
+  padding: 12px 24px;
   background-color: #3b82f6;
   color: white;
   text-decoration: none;
@@ -413,6 +414,94 @@ section.projetos .projetosflex{
   background-color: #2563eb;
 }
 
+/* Contato */
+
+section.contato {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 3%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+section.contato h2.titulo {
+    margin-bottom: 20px;
+}
+
+section.contato > p {
+    color: var(--texto-principal);
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+section.contato .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px; /* alinhado com outras sessões */
+}
+
+/* Item de contato */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+    max-width: 300px;
+    text-align: left;
+}
+
+section.contato .flex i {
+    color: var(--cor-viva);
+    font-size: 35px;
+    margin-top: 4px;
+}
+
+/* Texto ao lado do ícone */
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #1f2937;
+}
+
+.link {
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--cor-viva);
+}
+section.contato p {
+    color: var(--texto-principal);
+    margin-bottom: 60px;
+    margin-top: 60;
+}
+
+/* Estilização do título como "E-mail", "Telefone" etc. */
+.label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #1f2937;
+}
+
+/* Link ou texto (e-mail, telefone etc.) */
+.link {
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--cor-viva);
+}
 
 
 /* Elementos visuais de apoio (gerais ou compartilhados) */
@@ -444,5 +533,61 @@ section.projetos .projetosflex{
     }
     100% {
         top: 30px;
+    }
+}
+
+/* Responsividade para telas menores */
+
+@media screen and (max-width: 1020px) {
+
+    /* Cabeçalho */
+
+    .menu-desktop, .jpcontato {
+        display: none;
+    }
+
+    /* Classes Gerais */
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .interface {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        padding: 0 20px;
+    }
+
+    section.topo-site .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.especialidades .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.sobre .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.projetos .projetosflex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sobre .textosobre p {
+    padding: 15px 8%;
+    }
+    section.topo-site {
+    padding: 20px 8%;
+    }
+    .topo-site .txttoposite p {
+    text-align: justify;
     }
 }
