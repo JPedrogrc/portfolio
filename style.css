@@ -1,7 +1,4 @@
-/* ========================= */
 /* Variáveis de Tema */
-/* ========================= */
-
 :root {
     --cor-viva: #3b82f6;
     --cor-viva-hover: #2563eb;
@@ -10,11 +7,12 @@
     --cor-fundo: #f9f9f9;
     --cor-texto: #1e1e1e;
     --cor-branca: #ffffff;
+    --espaco-vertical-grande: 6rem; /* Ajustado para rem */
+    --espaco-vertical-medio: 4rem; /* Ajustado para rem */
+    --espaco-vertical-pequeno: 2rem; /* Ajustado para rem */
 }
 
-/* ========================= */
 /* Estilo geral */
-/* ========================= */
 
 * {
     margin: 0;
@@ -22,27 +20,23 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body {
-    background-color: var(--fundo);
+    background-color: var(--cor-fundo);
     height: 100vh;
+    padding-top: 80px;
 }
-
 .interface {
     max-width: 1280px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
-
 .flex {
     display: flex;
 }
-
 h2.titulo {
     color: var(--texto-principal);
     font-size: 38px;
     text-align: center;
 }
-
 h2.titulo span {
     color: var(--cor-viva);
 }
@@ -50,7 +44,13 @@ h2.titulo span {
 /* Estilo do cabeçalho */
 
 header {
-    padding: 30px 3%;
+    position: fixed; /* Fixa o header no topo */
+    top: 0; /* Alinha ao topo da página */
+    left: 0; /* Alinha à esquerda da página */
+    right: 0; /* Alinha à direita da página */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    background-color: rgba(255, 255, 255, 0); /* Fundo branco com 80% de opacidade */
+    padding: 10px 3%; /* Padding interno */
 }
 
 header .interface {
@@ -81,7 +81,7 @@ header nav ul li {
 }
 
 header .btn-contato button {
-    padding: 10px 30px;
+    padding: 10px 25px;
     font-size: 18px;
     font-weight: 600;
     background-color: var(--cor-viva);
@@ -97,18 +97,13 @@ header .btn-contato button:hover {
     transition: 1.2s;
 }
 
-/* ========================= */
 /* Estilo do topo do site */
-/* ========================= */
 
 section.topo-site {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 3%;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    padding: 4rem 3%; /* Padding interno */
+    margin-top: var(--espaco-vertical-grande);
 }
-
 section.topo-site .flex {
     display: flex;
     flex-wrap: wrap;
@@ -117,121 +112,99 @@ section.topo-site .flex {
     justify-content: center;
     gap: 90px;
 }
-
 .topo-site h1 {
     font-size: 40px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Padronizar esse espaçamento em todos os títulos*/
 }
-
-.topo-site .txttoposite h1 span {
+.topo-site .texto-topo h1 span {
     color: var(--cor-viva);
 }
-
-.topo-site .txttoposite p {
+.topo-site .texto-topo p {
     text-align: center;
     color: var(--texto-secundario);
     margin: 40px 0;
 }
-
-.topo-site .txttoposite p:nth-of-type(2) span {
+.topo-site .texto-topo p:nth-of-type(2) span {
     color: var(--cor-viva);
     font-size: 20px;
 }
-
-.topo-site .txttoposite button {
+.topo-site .texto-topo button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
+    color: var(--cor-branca);
     background-color: var(--cor-viva);
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-    display: block;
     margin: 0 auto;
-    color: #fff;
+    display: block;
 }
-
-.topo-site .txttoposite button:hover {
+.topo-site .texto-topo button:hover {
     box-shadow: 0 0 8px var(--fundo-botao-hover);
     transition: 1.2s;
     transform: scale(1.05);
 }
-
-.topo-site .txttoposite button a {
+.topo-site .texto-topo button a {
     text-align: center;
-}   
-
-.topo-site .txttoposite a {
+}
+.topo-site .texto-topo a {
     text-decoration: none;
 }
-
-.topo-site .txttoposite .setaparabaixo {
+.topo-site .texto-topo .setaparabaixo {
     padding: 60px 3%;
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 0px;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
-/* ========================= */
-/* Estilo das especialidades */
-/* ========================= */
-
+/* Especialidades */
 section.especialidades {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 3%;
-    margin-top: 10px;
-    margin-bottom: 80px;
+    padding: 4rem 3%; /* Padding interno */
+    margin-top: var(--espaco-vertical-grande);
 }
-
 section.especialidades .flex {
     gap: 60px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
-
-.especialidades p {
-    color: var(--texto-principal);
+.especialidades h2 {
+    font-size: 40px;
+    font-weight: 600;
     text-align: center;
+    margin-bottom: 20px; /*Padronizar esse espaçamento em todos os títulos*/
 }
-
 .especialidades .especialidades-box {
     display: flex;
     flex-direction: column;
     color: var(--texto-principal);
     padding: 40px;
     align-items: center;
-    margin-top: 40px;
     border-radius: 20px;
     background-color: var(--fundo-box);
     transition: 1.2s;
 }
-
 .especialidades .especialidades-box:hover {
-    box-shadow: 0 0 8px #ccc;
+    box-shadow: 0 0 8px #c0c0c0;
     transform: scale(1.05);
 }
-
 .especialidades .especialidades-box i {
     color: var(--cor-viva);
     font-size: 72px; 
 }
-
 .especialidades .especialidades-box h3 {
     color: var(--texto-principal);
     font-size: 24px;
     margin: 15px 0;
     text-align: center;
 }
-
-.especialidades .especialidades-box .langs,
-.especialidades .especialidades-box .libraries,
+.especialidades .especialidades-box .front-end,
+.especialidades .especialidades-box .back-end,
 .especialidades .especialidades-box .tools {
     display: flex;
     gap: 20px;
@@ -239,62 +212,26 @@ section.especialidades .flex {
     align-items: center;
 }
 
-/*Estilo Sobre*/
+/* Projetos */
 
-section.sobre {
-    max-width: 1200px;
+section.projetos {
     margin: 0 auto;
-    padding: 60px 3%;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding: 4rem 3%; /* Padding interno */
+    margin-top: var(--espaco-vertical-grande);
 }
-section.sobre .flex {
-    gap: 60px;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-.sobre .textosobre {
-    color: var(--texto-principal);
-}
-.sobre .textosobre h2 {
-    margin-bottom: 30px;
-}
-.sobre .textosobre p {
-    text-align: justify;
-}
-.sobre .textosobre .social{
-    display: flex;
-    margin-top: 15px;
-}
-.sobre .textosobre .social button{
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-color: #fff;
-    color: var(--cor-viva);
-    font-size: 25px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: 1.2s;
-}
-.sobre .textosobre .social button:hover {
-  transform: scale(1.1);
-}
-
-
-/*Estilo Projetos*/
-
-section.projetos{
-    padding: 80px 4%;
-}
-section.projetos .projetosflex{
+section.projetos .flex{
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 60px;
+    gap: 60px;
 }
-.img-proj{
+.projetos h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; /*Padronizar esse espaçamento em todos os títulos*/
+}
+.img-projetos {
     width: 360px;
     height: 460px;
     background-size: cover;
@@ -303,9 +240,8 @@ section.projetos .projetosflex{
     cursor: pointer;
     position: relative;
     transition: 1.5s;
-    margin-top: 60px;
 }
-.img-proj:hover{
+.img-projetos:hover{
     background-position: 100% 100%;
 }
 .overlay{
@@ -331,43 +267,156 @@ section.projetos .projetosflex{
     transition: 0.3s;
 }
 
+/* Sobre */
+
+/* Sobre */
+section.sobre {
+    margin: 0 auto;
+    padding: 4rem 3%; /* Padding interno */
+    margin-top: var(--espaco-vertical-grande);
+}
+section.sobre .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobre .textosobre h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; /*Padronizar esse espaçamento em todos os títulos*/
+}
+.sobre .textosobre {
+    flex: 2;
+}
+.sobre .textosobre p {
+    text-align: justify;
+}
+.sobre .textosobre .social{
+    display: flex;
+    margin-top: 15px;
+}
+.sobre .textosobre .social button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #fff;
+    color: var(--cor-viva);
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 1.2s;
+}
+.sobre .textosobre .social button:hover {
+  transform: scale(1.1);
+}
+.img{
+    display: flex;
+}
+.avatarsobre {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* Contato */
+
+section.contato {
+    margin: 0 auto;
+    padding: 4rem 3%; /* Padding interno */
+    margin-top: var(--espaco-vertical-grande);
+}
+section.contato h2.titulo {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; /*Padronizar esse espaçamento em todos os títulos*/
+}
+section.contato p {
+    color: var(--texto-principal);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+section.contato .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+section.contato .flex i {
+    color: var(--cor-viva);
+    font-size: 35px;
+    margin-top: 4px;
+}
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+    max-width: 300px;
+    text-align: left;
+}
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #1f2937;
+}
+.link {
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.link:hover {
+    color: var(--cor-viva);
+}
+
 /* Modais */
 
 .modal-fundo {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .modal-fundo.mostrar {
-  opacity: 1;
+    opacity: 1;
 }
 
 .modal-conteudo {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 900px;
-  width: 90%;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  position: relative;
-  transform: translateY(-20px);
-  opacity: 0;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
-  gap: 20px; /* Espaçamento entre os elementos */
-  text-align: center; /* Centraliza o texto */
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    position: relative;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre os elementos */
+    text-align: center; /* Centraliza o texto */
 }   
 
 .modal-conteudo p{
@@ -378,216 +427,62 @@ section.projetos .projetosflex{
 }
 
 .modal-fundo.mostrar .modal-conteudo {
-  transform: translateY(0);
-  opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .btn-fechar {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #666;
-  transition: color 0.2s;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
 }
 
 .btn-fechar:hover {
-  color: #333;
+    color: #333;
 }
 
 .btn-link {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #3b82f6;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  text-align: center;;
-}
-
-.btn-link:hover {
-  background-color: #2563eb;
-}
-
-/* Contato */
-
-section.contato {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 3%;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
     text-align: center;
 }
 
-section.contato h2.titulo {
-    margin-bottom: 20px;
-}
-
-section.contato > p {
-    color: var(--texto-principal);
-    margin-bottom: 40px;
-    font-size: 18px;
-}
-
-section.contato .flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px; /* alinhado com outras sessões */
-}
-
-/* Item de contato */
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 24px;
-    max-width: 300px;
-    text-align: left;
-}
-
-section.contato .flex i {
-    color: var(--cor-viva);
-    font-size: 35px;
-    margin-top: 4px;
-}
-
-/* Texto ao lado do ícone */
-.info-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.label {
-    font-weight: 500;
-    margin-bottom: 4px;
-    color: #1f2937;
-}
-
-.link {
-    color: #6b7280;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.link:hover {
-    color: var(--cor-viva);
-}
-section.contato p {
-    color: var(--texto-principal);
-    margin-bottom: 60px;
-    margin-top: 60;
-}
-
-/* Estilização do título como "E-mail", "Telefone" etc. */
-.label {
-    font-weight: 500;
-    margin-bottom: 4px;
-    color: #1f2937;
-}
-
-/* Link ou texto (e-mail, telefone etc.) */
-.link {
-    color: #6b7280;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.link:hover {
-    color: var(--cor-viva);
+.btn-link:hover {
+    background-color: #2563eb;
 }
 
 
-/* Elementos visuais de apoio (gerais ou compartilhados) */
 
-.sobreflex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.textosobre {
-    max-width: 600px;
-}
-
-.avatarsobre {
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-}
+/* Elementos Compartilhados */
 
 @keyframes flutuar {
     0% {
-        top: 0;
+        transform: translateY(0);
     }
     100% {
-        top: 30px;
+        transform: translateY(-20px);
     }
 }
-
-/* Responsividade para telas menores */
-
-@media screen and (max-width: 1020px) {
-
-    /* Cabeçalho */
-
-    .menu-desktop, .jpcontato {
-        display: none;
-    }
-
-    /* Classes Gerais */
-
-    .flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header .interface {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        padding: 0 20px;
-    }
-
-    section.topo-site .flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    section.especialidades .flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    section.sobre .flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    section.projetos .projetosflex {
-        flex-direction: column;
-        align-items: center;
-    }
-    .sobre .textosobre p {
-    padding: 15px 8%;
-    }
-    section.topo-site {
-    padding: 20px 8%;
-    }
-    .topo-site .txttoposite p {
-    text-align: justify;
-    }
+html {
+  scroll-behavior: smooth;
+}
+/* Ajustes gerais para todas as sections */
+section {
+    margin-bottom: var(--espaco-vertical-medio); /* Espaçamento entre sections */
+}
+/* Remove margin-bottom da última section para evitar espaço extra */
+section:last-of-type {
+    margin-bottom: 0;
 }
