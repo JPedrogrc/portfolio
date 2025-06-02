@@ -7,9 +7,9 @@
     --cor-fundo: #f9f9f9;
     --cor-texto: #1e1e1e;
     --cor-branca: #ffffff;
-    --espaco-vertical-grande: 6rem; /* Ajustado para rem */
-    --espaco-vertical-medio: 4rem; /* Ajustado para rem */
-    --espaco-vertical-pequeno: 2rem; /* Ajustado para rem */
+    --espaco-vertical-grande: 6rem;
+    --espaco-vertical-medio: 4rem;
+    --espaco-vertical-pequeno: 2rem;
 }
 
 /* Estilo geral */
@@ -44,13 +44,13 @@ h2.titulo span {
 /* Estilo do cabeçalho */
 
 header {
-    position: fixed; /* Fixa o header no topo */
-    top: 0; /* Alinha ao topo da página */
-    left: 0; /* Alinha à esquerda da página */
-    right: 0; /* Alinha à direita da página */
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
-    background-color: rgba(255, 255, 255, 0); /* Fundo branco com 80% de opacidade */
-    padding: 10px 3%; /* Padding interno */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px 3%;
 }
 
 header .interface {
@@ -101,7 +101,7 @@ header .btn-contato button:hover {
 
 section.topo-site {
     margin: 0 auto;
-    padding: 4rem 3%; /* Padding interno */
+    padding: 4rem 3%;
     margin-top: var(--espaco-vertical-grande);
 }
 section.topo-site .flex {
@@ -162,9 +162,10 @@ section.topo-site .flex {
 }
 
 /* Especialidades */
+
 section.especialidades {
     margin: 0 auto;
-    padding: 4rem 3%; /* Padding interno */
+    padding: 4rem 3%;
     margin-top: var(--espaco-vertical-grande);
 }
 section.especialidades .flex {
@@ -216,7 +217,7 @@ section.especialidades .flex {
 
 section.projetos {
     margin: 0 auto;
-    padding: 4rem 3%; /* Padding interno */
+    padding: 4rem 3%;
     margin-top: var(--espaco-vertical-grande);
 }
 section.projetos .flex{
@@ -269,10 +270,9 @@ section.projetos .flex{
 
 /* Sobre */
 
-/* Sobre */
 section.sobre {
     margin: 0 auto;
-    padding: 4rem 3%; /* Padding interno */
+    padding: 4rem 3%;
     margin-top: var(--espaco-vertical-grande);
 }
 section.sobre .flex {
@@ -414,9 +414,9 @@ section.contato .flex i {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    gap: 20px; /* Espaçamento entre os elementos */
-    text-align: center; /* Centraliza o texto */
+    align-items: center;
+    gap: 20px;
+    text-align: center;
 }   
 
 .modal-conteudo p{
@@ -463,8 +463,6 @@ section.contato .flex i {
     background-color: #2563eb;
 }
 
-
-
 /* Elementos Compartilhados */
 
 @keyframes flutuar {
@@ -478,11 +476,9 @@ section.contato .flex i {
 html {
   scroll-behavior: smooth;
 }
-/* Ajustes gerais para todas as sections */
 section {
-    margin-bottom: var(--espaco-vertical-medio); /* Espaçamento entre sections */
+    margin-bottom: var(--espaco-vertical-medio);
 }
-/* Remove margin-bottom da última section para evitar espaço extra */
 section:last-of-type {
     margin-bottom: 0;
 }
